@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
+    int age =15;
     public MyPanel() {
         JTextField textField = new JTextField("                          ");
         JTextField textField1 = new JTextField("                         ");
@@ -21,7 +22,7 @@ public class MyPanel extends JPanel {
                     String first = textField.getText().trim();
                     try {
                         int f = Integer.parseInt(first);
-                        textField1.setText("" + f * 2);
+                        textField1.setText("" + f * age);
                     }
                     catch (NumberFormatException a){
                         textField.setText("Try imput");
