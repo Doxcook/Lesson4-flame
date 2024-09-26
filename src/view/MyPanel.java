@@ -1,6 +1,8 @@
 package view;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
     public MyPanel() {
@@ -10,6 +12,11 @@ public class MyPanel extends JPanel {
         add(textField);
         add(textField1);
         add(button);
-        button.addActionListener();
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 }
