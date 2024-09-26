@@ -7,6 +7,8 @@ public class MyFrame extends JFrame {
     MyPanel panel;
     public MyFrame(MyPanel panel) throws HeadlessException{
         this.panel = panel;
+        setResizable(false);
+        //setLayout(null);
         add(panel);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500,500);

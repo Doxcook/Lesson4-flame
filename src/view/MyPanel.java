@@ -7,12 +7,17 @@ import java.awt.event.ActionListener;
 public class MyPanel extends JPanel {
     int age =15;
     public MyPanel() {
-        JTextField textField = new JTextField("                          ");
-        JTextField textField1 = new JTextField("                         ");
+        JTextField textField = new JTextField("                        ");
+        JTextField textField1 = new JTextField("                        ");
         JButton button = new JButton("Go");
+
         add(textField);
+        textField.setBounds(10,10,150,50);
         add(textField1);
+        textField.setBounds(20,20,150,50);
         add(button);
+        textField.setBounds(20,20,150,50);
+
         button.addActionListener(
                 new ActionListener()
             {
