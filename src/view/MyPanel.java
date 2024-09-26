@@ -6,8 +6,8 @@ import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
     public MyPanel() {
-        JTextField textField = new JTextField("   ");
-        JTextField textField1 = new JTextField("   ");
+        JTextField textField = new JTextField("          ");
+        JTextField textField1 = new JTextField("         ");
         JButton button = new JButton("null");
         add(textField);
         add(textField1);
@@ -18,7 +18,9 @@ public class MyPanel extends JPanel {
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
-
+                    String first = textField.getText().trim();
+                    int f = Integer.parseInt(first);
+                    textField1.setText(""+f*2);
                 }
             }
         );
