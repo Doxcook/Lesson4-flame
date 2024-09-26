@@ -12,11 +12,15 @@ public class MyPanel extends JPanel {
         add(textField);
         add(textField1);
         add(button);
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        button.addActionListener(
+                new ActionListener()
+            {
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
 
+                }
             }
-        });
+        );
     }
 }
