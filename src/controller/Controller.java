@@ -9,9 +9,9 @@ public class Controller {
     MyPanel panel;
     MyFrame frame;
     public Controller() {
-        Cat cat = new Cat();
-        MyPanel panel = new MyPanel();
-        MyFrame frame = new MyFrame(panel);
+        cat = new Cat();
+        panel = new MyPanel(this);
+        frame = new MyFrame(panel);
     }
 
     public static void main(String[] args) {
