@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
     public MyPanel() {
-        JTextField textField = new JTextField("          ");
-        JTextField textField1 = new JTextField("         ");
-        JButton button = new JButton("null");
+        JTextField textField = new JTextField("                          ");
+        JTextField textField1 = new JTextField("                         ");
+        JButton button = new JButton("Go");
         add(textField);
         add(textField1);
         add(button);
@@ -19,8 +19,13 @@ public class MyPanel extends JPanel {
                 public void actionPerformed(ActionEvent e)
                 {
                     String first = textField.getText().trim();
-                    int f = Integer.parseInt(first);
-                    textField1.setText(""+f*2);
+                    try {
+                        int f = Integer.parseInt(first);
+                        textField1.setText("" + f * 2);
+                    }
+                    catch (NumberFormatException a){
+                        textField.setText("Try imput");
+                    }
                 }
             }
         );
