@@ -8,4 +8,7 @@ public class Cat {
     public Cat(int age) {
         this.age = age;
     }
+    public void setAge(int age){
+        this.age = age;
+    }
 }

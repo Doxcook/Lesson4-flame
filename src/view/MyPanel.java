@@ -3,10 +3,14 @@ package view;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import controller.Controller;
 
 public class MyPanel extends JPanel {
-    int age =15;
-    public MyPanel() {
+    private Controller controller;
+
+    public MyPanel(Controller controller) {
+        this.controller = controller;
+
         JTextField textField = new JTextField("                        ");
         JTextField textField1 = new JTextField("                        ");
         JButton button = new JButton("Go");
@@ -27,7 +31,8 @@ public class MyPanel extends JPanel {
                     String first = textField.getText().trim();
                     try {
                         int f = Integer.parseInt(first);
-                        textField1.setText("" + f * 2);
+                        controller.setAge(f);
+                        textField1.setText("" + f * 1);
                     }
                     catch (NumberFormatException a){
                         textField.setText("Try imput");
