@@ -27,7 +27,7 @@ public class MyPanel extends JPanel {
                     String first = textField.getText().trim();
                     try {
                         int f = Integer.parseInt(first);
-                        textField1.setText("" + f * age);
+                        textField1.setText("" + f * 2);
                     }
                     catch (NumberFormatException a){
                         textField.setText("Try imput");
